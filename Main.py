@@ -3,6 +3,7 @@ Created on Mon Oct 16 12:27:48 2023
 
 @author: sunhouse
 
+After checking the possibility of modeling ( in try.py) we cna go for main Code.
 The second edition
 
 Nokte asli:
