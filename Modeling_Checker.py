@@ -4,7 +4,9 @@ Created on Sun Oct 15 11:21:45 2023
 
 @author: sunhouse
 
-https://www.springer.com/journal/10965/submission-guidelines
+Check code for possibility of modeling or not
+criteria: some  criteria percentage for metrics of ML models
+
 
 this is the first, after that we could do that in the goodway
 
