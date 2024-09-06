@@ -7,29 +7,36 @@ Created on Sun Oct 15 11:21:45 2023
 Check code for possibility of modeling or not
 criteria: some  criteria percentage for metrics of ML models
 
-
 this is the first, after that we could do that in the goodway
 
 """
 
 
-
 import numpy as np
+import matplotlib.pyplot as plt
+
+from sklearn.preprocessing import MinMaxScaler
+
+from sklearn.model_selection import KFold
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import cross_val_score
+
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.svm import SVR
+from sklearn.neural_network import MLPRegressor
+
+
+
 
 x=np.array(([100,0],[80,20],[50,50],[20,80],[0,100]))
 
 #y1=np.array(([66,52],[65,54],[64,55],[61,51],[61,40]))
 y1=np.array([66,65,64,61,61])
 y2=np.array((52,54,55,51,40))
-from sklearn.model_selection import GridSearchCV
-
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import KFold
 
 fold=KFold(n_splits=5,shuffle=True,random_state=0)
 
-from sklearn.svm import SVR
-from sklearn.preprocessing import MinMaxScaler
+
 scale= MinMaxScaler()
 scale.fit(x)
 x_scaled=scale.transform(x)
@@ -49,7 +56,6 @@ print('our score in TC is',cv_score.mean()) #-0.053238470530894796
 
 
 
-import matplotlib.pyplot as plt
 n2=np.arange(0,101).reshape(-1,1)
 n1=np.flip(n2).reshape(-1,1)
 
@@ -66,10 +72,6 @@ model12_pred=model12.predict(scaled_new)
 #model2_pred=model2.predict(new)
 
 
-
-
-from sklearn.neural_network import MLPRegressor
-from sklearn.ensemble import RandomForestRegressor
 
 
 
